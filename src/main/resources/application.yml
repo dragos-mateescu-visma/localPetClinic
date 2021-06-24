@@ -1,0 +1,40 @@
+# database init, supports mysql too
+database: h2
+
+# Logging
+logging:
+  level:
+    org.springframework:
+      security: DEBUG
+#    org.springframework.web=DEBUG
+#    org.springframework.context.annotation=TRACE
+
+spring:
+  datasource:
+    schema: classpath*:db/${database}/schema.sql
+    data: classpath*:db/${database}/data.sql
+
+  # Web
+  thymeleaf:
+    mode: HTML
+
+  # JPA
+  jpa:
+    hibernate.ddl-auto: none
+    open-in-view: false
+
+  # Internationalization
+  messages:
+    basename: messages/messages
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://connect.identity.stagaws.visma.com
+          jwk-set-uri: https://connect.identity.stagaws.visma.com/.well-known/openid-configuration/jwks
+          visma-connect-jose-type: at+jwt
+
+auth0:
+  audience: https://vntc-api.stage.vismaonline.com
+  scope: petclinicapi:read
