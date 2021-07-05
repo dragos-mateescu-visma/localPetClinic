@@ -21,6 +21,6 @@ jobs:
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           #prerelease: false
-          prerelease: ${{ contains("${{ github.ref }}", 'alfa') }}
+          prerelease: ${{ contains(github.ref, 'alfa') }}
       #    files: |
       #      LICENSE.txt
