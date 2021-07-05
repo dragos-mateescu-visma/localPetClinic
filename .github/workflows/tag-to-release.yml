@@ -20,6 +20,7 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
+          #prerelease: false
+          prerelease: contains(github.ref, '-alfa')
       #    files: |
       #      LICENSE.txt
