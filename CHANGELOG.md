@@ -1,3 +1,9 @@
+# Version: 3.3.1
+
+* [ea767d](https://github.com/dragos-mateescu-visma/localPetClinic/commit/ea767d42364c0ed1a0acc0aa80a971dc470e7b84): this is a test
+* [b51ae9](https://github.com/dragos-mateescu-visma/localPetClinic/commit/b51ae98d2d551fed3bc543a08706345f96988c65): Release 3.3.0
+
+
 # Version: 2.0.0
 
 * [9de0b8](https://github.com/dragos-mateescu-visma/test/commit/9de0b8cfb82aab140b88e4b008ab1b9c5c89865b): 1.1.0 test add feature pull request
